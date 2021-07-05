@@ -1,0 +1,41 @@
+﻿@model EsraDurgunFinalProject.Data.Model.Dress
+@{
+    ViewData["Title"] = "DressGet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>DressGet</h1>
+<br />
+@using (Html.BeginForm("DressUpdate", "Dress", FormMethod.Post))
+{
+    @Html.Label("Dress ID")
+    @Html.TextBoxFor(x => x.DressId, new { @class = "form-control" })
+    <br />
+    @Html.Label("Dress Name")
+    @Html.TextBoxFor(x => x.DressName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Dress Description")
+    @Html.TextAreaFor(x => x.DressDes, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Dress Category")
+    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.v1, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Price")
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Image")
+    @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Stock")
+    @Html.TextBoxFor(x => x.Stocak, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-info">Save</button>
+
+}
+
+

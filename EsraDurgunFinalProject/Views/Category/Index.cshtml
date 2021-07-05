@@ -1,0 +1,27 @@
+﻿@model List<EsraDurgunFinalProject.Data.Model.Category>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Category List</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Category Name</th>
+        <th>Update</th>
+
+    </tr>
+    @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.CatId</td>
+                    <td>@x.CatName</td>
+                    <td><a href="/Category/CategoryGet" class="btn btn-success">Update</a></td>                
+                </tr>
+            }
+</table>
+<a href="/Category/CategoryAdd" class="btn btn-primary">New Category</a>
+
+
+

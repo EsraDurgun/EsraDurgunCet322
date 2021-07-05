@@ -1,0 +1,22 @@
+﻿@model EsraDurgunFinalProject.Data.Model.Category
+
+@{
+    ViewData["Title"] = "CategoryAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Category Add</h1>
+<br />
+@using (Html.BeginForm("CategoryAdd", "Category", FormMethod.Post))
+{
+    @Html.Label("Category Name")
+    @Html.TextBoxFor(x => x.CatName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CatName,"", new {@style = "color:red" })
+    <br />
+    @Html.Label("Category Description")
+    @Html.TextAreaFor(x => x.CatDes, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-info">Save</button>
+
+}

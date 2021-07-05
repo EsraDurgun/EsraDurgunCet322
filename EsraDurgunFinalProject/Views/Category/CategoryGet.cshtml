@@ -1,0 +1,26 @@
+﻿@model EsraDurgunFinalProject.Data.Model.Category
+@{
+    ViewData["Title"] = "CategoryGet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>DressGet</h1>
+<br />
+@using (Html.BeginForm("CategoryUpdate", "Category", FormMethod.Post))
+{
+    @Html.Label("Category ID")
+    @Html.TextBoxFor(x => x.CatId, new { @class = "form-control" })
+    <br />
+    @Html.Label("Category Name")
+    @Html.TextBoxFor(x => x.CatName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Dress Description")
+    @Html.TextAreaFor(x => x.CatDes, new { @class = "form-control" })
+
+ 
+    <br />
+    <button class="btn btn-info">Save</button>
+
+}
+
+

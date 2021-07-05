@@ -1,0 +1,39 @@
+﻿@model List<EsraDurgunFinalProject.Data.Model.Dress>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Dress List</h1>
+
+
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Dress Name</th>
+        <th>Category Name</th>
+        <th>Price</th>
+
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Details</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+<tr>
+    <td>@x.DressId</td>
+    <td>@x.DressName</td>
+    <td>@x.Category.CatName</td>
+    <td>@x.Price</td>
+
+    <td><a href="/Dress/DeleteDress/@x.DressId" class="btn btn-danger">Delete</td>
+
+    <td><a href="/Dress/DressGet/@x.DressId" class="btn btn-success">Update</a>
+    <td><a href="#" class="btn btn-info">Details</a>
+</tr>
+    }
+</table>
+<a href="/Dress/AddDress" class="btn btn-primary">New Dress</a>
+
