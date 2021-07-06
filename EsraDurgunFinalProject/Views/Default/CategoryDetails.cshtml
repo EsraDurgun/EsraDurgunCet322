@@ -30,12 +30,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script type="text/javascript" src="~/web/js/move-top.js"></script>
     <script type="text/javascript" src="~/web/js/easing.js"></script>
     <script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
     </script>
     <!-- start-smoth-scrolling -->
 </head>
@@ -115,20 +115,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div><div class="clearfix"></div>
     </div>
     <!-- banner -->
-    
     <!-- top-brands -->
     <div class="top-brands">
         <div class="container">
 
-            @RenderBody();
+
         </div>
     </div>
     <div class="top-brands">
         <div class="container">
-            <h3>Products</h3>
-            @await Component.InvokeAsync("DressGetList")
-            @RenderBody()
             
+            <h3>Products</h3>
+            @await Component.InvokeAsync("DressListByCategory", new { id = ViewBag.x })
+
+
+
         </div>
     </div>
     <!-- //top-brands -->

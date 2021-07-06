@@ -303,7 +303,7 @@ ul.dropdown-menu.drp-mnu li a i {
 	margin-bottom: 5em;
 }
 .w3l_banner_nav_right_banner{
-	background:url(web/images/slider1.jpg) no-repeat 0px 0px;
+	background-image url(../images/slider1.jpg);
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -311,7 +311,7 @@ ul.dropdown-menu.drp-mnu li a i {
 	-ms-background-size:cover;
 }
 .w3l_banner_nav_right_banner1{
-	background:url(../images/2.jpg) no-repeat 0px 0px;
+	
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -319,7 +319,7 @@ ul.dropdown-menu.drp-mnu li a i {
 	-ms-background-size:cover;
 }
 .w3l_banner_nav_right_banner2{
-	background:url(../images/3.jpg) no-repeat 0px 0px;
+	
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
